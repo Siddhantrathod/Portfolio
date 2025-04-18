@@ -4687,3 +4687,72 @@ input, select, textarea {
 		}
 
 	}
+
+#footer {
+    padding: 4em 0 2em 0;
+    background-color: #1e252d;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 2em;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.contact-info {
+    margin-top: 1.5em;
+}
+
+.contact-info p {
+    margin-bottom: 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 0.8em;
+    color: #ffffff;
+}
+
+.footer-section .icons {
+    margin-top: 1.5em;
+}
+
+.footer-section .icons li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.footer-section .icons a {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.footer-section .icons a:hover {
+    color: #4c5c96;
+}
+
+@media screen and (max-width: 736px) {
+    .footer-content {
+        flex-direction: column;
+        padding: 0 1em;
+    }
+    
+    .footer-section {
+        padding: 1em 0;
+    }
+}
