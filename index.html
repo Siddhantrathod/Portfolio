@@ -1,478 +1,301 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
-		<title>SiddhantRathod</title>
+		<title>Siddhant Rathod - Portfolio | Web & App Developer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Siddhant Rathod - Information Technology student specializing in App and Web development, UI/UX design, and software engineering." />
+		<meta name="keywords" content="Siddhant Rathod, Web Developer, App Developer, UI/UX Designer, Flutter Developer, ReactJS Developer" />
+		<meta name="author" content="Siddhant Rathod" />
+		<meta property="og:title" content="Siddhant Rathod - Portfolio" />
+		<meta property="og:description" content="Information Technology student specializing in App and Web development, UI/UX design, and software engineering." />
+		<meta property="og:type" content="website" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/splash.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Splash Screen Styles */
-			.splash-screen {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: #1a1a1a;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				z-index: 9999;
-				opacity: 1;
-				transition: opacity 0.5s ease-out;
-			}
-
-			.splash-screen.hidden {
-				opacity: 0;
-			}
-
-			.splash-logo {
-				font-size: 2rem;
-				font-weight: bold;
-				color: #ffffff;
-				animation: pulse 2s infinite;
-			}
-
-			@keyframes pulse {
-				0% {
-					transform: scale(1);
-					opacity: 1;
-				}
-				50% {
-					transform: scale(1.1);
-					opacity: 0.8;
-				}
-				100% {
-					transform: scale(1);
-					opacity: 1;
-				}
-			}
-
-			/* Hide main content initially */
-			#wrapper {
-				opacity: 0;
-				transition: opacity 0.5s ease-in;
-			}
-
-			#wrapper.visible {
-				opacity: 1;
-			}
-
-			/* Intro Section Background */
-			#intro {
-				background: url('assets/images/main.png') no-repeat center ;
-				background-size: cover;
-				color: #ffffff; /* Ensure text is readable */
-				text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add text shadow for better contrast */
-				padding: 10rem 2rem; /* Add padding for spacing */
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				height: 130vh; /* Full viewport height */
-				margin-top: 2rem; /* Add space from the top */
-			}
-
-			#intro h1 {
-				font-size: 4rem;
-				margin-bottom: 1rem;
-				text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
-			}
-
-			#intro p {
-				font-size: 1.2rem;
-				max-width: 1200px;
-				text-align: center;
-				text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
-			}
-
-			#intro .actions {
-				margin-top: 2rem;
-			}
-		</style>
+		<link rel="preload" href="assets/images/main.png" as="image" />
 	</head>
 	<body class="is-preload">
 
 		<!-- Splash Screen -->
-		<div class="splash-screen" id="splashScreen">
-			<div class="splash-logo">S</div>
+		<div class="splash-screen" id="splashScreen" aria-hidden="true">
+			<div class="splash-logo" aria-label="Loading">S</div>
 		</div>
 
 		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Hi, I'm<br />
-						<b>Siddhant Rathod</b></h1>
-						<p>A motivated and detail-oriented Information Technology student specializing in<br />
-						App and Web development, UI/UX design, and software engineering.</p>
-						<ul class="actions">
-							<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			<!-- Intro -->
+			<section id="intro" class="intro-section">
+				<h1>Hi, I'm<br />
+				<strong>Siddhant Rathod</strong></h1>
+				<p>A motivated and detail-oriented Information Technology student specializing in<br />
+				App and Web development, UI/UX design, and software engineering.</p>
+				<ul class="actions">
+					<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
+			</section>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li class="active"><a href="#about">About</a></li>
+					<li><a href="#resume">Resume</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://github.com/Siddhantrathod" class="icon brands fa-github" aria-label="GitHub Profile"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f" aria-label="Facebook Profile"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/siddhantrathod_17?igsh=MWE5NXd3MThwajFpbw==" class="icon brands fa-instagram" aria-label="Instagram Profile"><span class="label">Instagram</span></a></li>
+					<li><a href="https://www.linkedin.com/in/siddhant-rathod-3a05b0275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon brands fa-linkedin-in" aria-label="LinkedIn Profile"><span class="label">LinkedIn</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<main id="main">
+				<!-- About Section -->
+				<section id="about" class="post">
+					<header class="major">
+						<h1>About Me</h1>
+						<p>Information Technology Student & Developer</p>
+					</header>
+					
+					<p>I'm Siddhant Rathod, a passionate Information Technology student with a keen interest in App and Web development. I have a strong foundation in programming languages and web technologies, and I'm always eager to learn and explore new tools and frameworks.</p>
+					<p>I'm currently pursuing my Bachelor's degree in Information Technology at Birla Vishvakarma Mahavidyalaya, Anand. I have a solid foundation in programming languages such as C++, Java, and Python, and I'm proficient in web development technologies including HTML5, CSS3, JavaScript, and ReactJS. My experience with Flutter has allowed me to create cross-platform mobile applications.</p>
+				</section>
+
+				<!-- Resume Section -->
+				<section id="resume" class="post">
+					<header class="major">
+						<h1>My Resume</h1>
+						<p>Professional Experience & Qualifications</p>
+					</header>
+
+					<h2>Professional Summary</h2>
+					<p>Motivated and detail-oriented Information Technology student with a strong passion for App and Web development, UI/UX design, and software engineering. Known for creative problem-solving, strong communication, and a user-focused mindset. Adaptable and quick to learn, with a drive to contribute to innovative teams and deliver high-quality digital solutions.</p>
+
+					<hr />
+
+					<h2>Work Experience</h2>
+					<article class="experience">
+						<h3>Flutter Developer Intern</h3>
+						<p class="company">Technoguide Infosoft Pvt. Ltd. • Anand, Gujarat</p>
+						<p class="date">06/2024 - 07/2024</p>
+						<ul>
+							<li>Gained hands-on experience in web development (HTML, CSS, JavaScript)</li>
+							<li>Developed multiple Flutter applications including News App, Weather App, and Todo App</li>
+							<li>Learned and implemented API integration in projects</li>
+							<li>Developed a dynamic News App using Flutter with real-time data handling</li>
+							<li>Implemented clean UI/UX principles in all projects</li>
 						</ul>
+					</article>
+
+					<hr />
+
+					<h2>Education</h2>
+					<article class="education">
+						<h3>Bachelor's of Technology in Information Technology</h3>
+						<p class="institution">Birla Vishvakarma Mahavidyalaya • Anand, Gujarat</p>
+						<p class="date">2022-Present</p>
+
+						<h3>HSC (12th)</h3>
+						<p class="institution">Phoenix Institute • Vadodara, Gujarat</p>
+						<p class="date">April-2022</p>
+					</article>
+
+					<hr />
+
+					<h2>Skills</h2>
+					<div class="row">
+						<div class="col-6 col-12-small">
+							<h3>Technical Skills</h3>
+							<ul>
+								<li>HTML5 & JavaScript</li>
+								<li>Flutter & ReactJS</li>
+								<li>ASP.NET & MongoDB</li>
+								<li>SQL & PHP</li>
+								<li>C++</li>
+							</ul>
+						</div>
+						<div class="col-6 col-12-small">
+							<h3>Soft Skills</h3>
+							<ul>
+								<li>UI/UX Design</li>
+								<li>Team Management</li>
+								<li>Communication Skills</li>
+								<li>Graphic Design</li>
+							</ul>
+						</div>
 					</div>
+					
+					<div class="resume-download">
+						<a href="assets/Siddhant_Rathod_Resume.pdf" class="button primary icon solid fa-download" download>
+							Download Resume
+						</a>
+					</div>
+				</section>
 
-				<!-- Header -->
-					<!-- <header id="header">
-						 <a href="index.html" class="logo">Siddhant Rathod</a> 
-					</header> -->
+				<!-- Services Section -->
+				<section id="services" class="post">
+					<header class="major">
+						<h1>My Services</h1>
+						<p>Professional Solutions for Your Digital Needs</p>
+					</header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<!-- <li class="active"><a href="#intro">Home</a></li> -->
-							<li class="active"><a href="#about">About</a></li>
-							<li><a href="#resume">Resume</a></li>
-							<li><a href="#services">Services</a></li>
-							<li><a href="#portfolio">Portfolio</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://github.com/Siddhantrathod " class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.instagram.com/siddhantrathod_17?igsh=MWE5NXd3MThwajFpbw==" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://www.linkedin.com/in/siddhant-rathod-3a05b0275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-						<!-- Home -->
-						
-						<!-- About Section -->
-						<section id="about" class="post">
-							<header class="major">
-								<h1>About Me</h1>
-								<p>Information Technology Student & Developer</p>
-							</header>
-							
-							<p>I'm Siddhant Rathod, a passionate Information Technology student with a keen interest in App and Web development. I have a strong foundation in programming languages and web technologies, and I'm always eager to learn and explore new tools and frameworks.</p>
-							<p>I'm currently pursuing my Bachelor's degree in Information Technology at Birla Vishvakarma Mahavidyalaya, Anand. I have a solid foundation in programming languages such as C++, Java, and Python, and I'm proficient in web development technologies including HTML5, CSS3, JavaScript, and ReactJS. My experience with Flutter has allowed me to create cross-platform mobile applications.</p>
-						</section>
-
-						<!-- Resume Section -->
-						<section id="resume" class="post">
-							<header class="major">
-								<h1>My Resume</h1>
-								<p>Professional Experience & Qualifications</p>
-							</header>
-
-							<h2>Professional Summary</h2>
-							<p>Motivated and detail-oriented Information Technology student with a strong passion for App and Web development, UI/UX design, and software engineering. Known for creative problem-solving, strong communication, and a user-focused mindset. Adaptable and quick to learn, with a drive to contribute to innovative teams and deliver high-quality digital solutions.</p>
-
-							<hr />
-
-							<h2>Work Experience</h2>
-							<div class="experience">
-								<h3>Flutter Developer Intern</h3>
-								<p class="company">Technoguide Infosoft Pvt. Ltd. • Anand, Gujarat</p>
-								<p class="date">06/2024 - 07/2024</p>
+					<div class="row">
+						<div class="col-6 col-12-medium">
+							<article class="box">
+								<h2><i class="fas fa-code" aria-hidden="true"></i> Web Development</h2>
+								<p>Building responsive and scalable websites using modern technologies.</p>
 								<ul>
-									<li>Gained hands-on experience in web development (HTML, CSS, JavaScript)</li>
-									<li>Developed multiple Flutter applications including News App, Weather App, and Todo App</li>
-									<li>Learned and implemented API integration in projects</li>
-									<li>Developed a dynamic News App using Flutter with real-time data handling</li>
-									<li>Implemented clean UI/UX principles in all projects</li>
-								</ul>
-							</div>
-
-							<hr />
-
-							<h2>Education</h2>
-							<div class="education">
-								<h3>Bachelor's of Technology in Information Technology</h3>
-								<p class="institution">Birla Vishvakarma Mahavidyalaya • Anand, Gujarat</p>
-								<p class="date">2022-Present</p>
-
-								<h3>HSC (12th)</h3>
-								<p class="institution">Phoenix Institute • Vadodara, Gujarat</p>
-								<p class="date">April-2022</p>
-							</div>
-
-							<hr />
-
-							<h2>Skills</h2>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<h3>Technical Skills</h3>
-									<ul>
-										<li>HTML5 & JavaScript</li>
-										<li>Flutter & ReactJS</li>
-										<li>ASP.NET & MongoDB</li>
-										<li>SQL & PHP</li>
-										<li>C++</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<h3>Soft Skills</h3>
-									<ul>
-										<li>UI/UX Design</li>
-										<li>Team Management</li>
-										<li>Communication Skills</li>
-										<li>Graphic Design</li>
-									</ul>
-								</div>
-							</div>
-							
-							<div></div><div></div>
-							<div style="text-align: center; margin-top: -2rem;">
-								<a href="assets/Siddhant_Rathod_Resume.pdf" class="button primary icon solid fa-download" download>
-									Download Resume
-								</a>
-							</div>
-						</section>
-						
-							
-						
-
-						<!-- Services Section -->
-						<section id="services" class="post">
-							<header class="major">
-								<h1>My Services</h1>
-								<p>Professional Solutions for Your Digital Needs</p>
-							</header>
-
-							<div class="row">
-								<div class="col-6 col-12-medium">
-									<div class="box">
-										<h2><i class="fas fa-code"></i> Web Development</h2>
-										<p>Building responsive and scalable websites using modern technologies.</p>
-										<ul>
-											<li>HTML5 & JavaScript</li>
-											<li>ReactJS Development</li>
-											<li>PHP & MySQL</li>
-											<li>ASP.NET</li>
-											<li>MongoDB Integration</li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="col-6 col-12-medium">
-									<div class="box">
-										<h2><i class="fas fa-mobile-alt"></i> Mobile App Development</h2>
-										<p>Creating cross-platform mobile applications with Flutter.</p>
-										<ul>
-											<li>Flutter Development</li>
-											<li>UI/UX Design</li>
-											<li>API Integration</li>
-											<li>State Management</li>
-											
-										</ul>
-									</div>
-								</div>
-
-								<div class="col-6 col-12-medium">
-									<div class="box">
-										<h2><i class="fas fa-pencil-ruler"></i> UI/UX Design</h2>
-										<p>Creating intuitive and engaging user experiences.</p>
-										<ul>
-											<li>User Interface Design</li>
-											<li>User Experience Design</li>
-											<li>Wireframing</li>
-											<li>Prototyping</li>
-											<li>User Research</li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="col-6 col-12-medium">
-									<div class="box">
-										<h2><i class="fas fa-palette"></i> Graphic Design</h2>
-										<p>Creating visually stunning designs for various platforms.</p>
-										<ul>
-											<li>Event Posters</li>
-											<li>Social Media Content</li>
-											<li>Branding Materials</li>
-											
-											<li>Promotional Materials</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<!-- Portfolio Section -->
-						<section id="portfolio" class="posts">
-							<header class="major">
-								<h1>My Portfolio</h1>
-								<p>Showcasing My Best Work</p>
-							</header>
-
-							<article>
-								<header>
-									<h2><a href="#">QuickMeds<br />
-									Online Inventory Management</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-								<p>A MERN Stack-based medicine ordering system with multi-tier user model, streamlining inventory, order processing, and delivery across connected pharmacies.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button">View Project</a></li>
+									<li>HTML5 & JavaScript</li>
+									<li>ReactJS Development</li>
+									<li>PHP & MySQL</li>
+									<li>ASP.NET</li>
+									<li>MongoDB Integration</li>
 								</ul>
 							</article>
-							<article>
-								<header>
-									<h2><a href="#">PropertyPulse<br />
-									Real Estate Platform</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-								<p>A PHP & MySQL-based platform for booking, buying, and financing homes and plots, offering an end-to-end solution for real estate needs.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button">View Project</a></li>
+						</div>
+
+						<div class="col-6 col-12-medium">
+							<article class="box">
+								<h2><i class="fas fa-mobile-alt" aria-hidden="true"></i> Mobile App Development</h2>
+								<p>Creating cross-platform mobile applications with Flutter.</p>
+								<ul>
+									<li>Flutter Development</li>
+									<li>UI/UX Design</li>
+									<li>API Integration</li>
+									<li>State Management</li>
 								</ul>
 							</article>
-						</section>
+						</div>
 
-						<!-- Contact Section -->
-						<section id="contact" class="post">
-							<header class="major">
-								<h1>Get in Touch</h1>
-								<p>Let's discuss your next project</p>
-							</header>
-
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<h2>Contact Information</h2>
-									<div class="box">
-										<div class="contact-info">
-											<div class="contact-item">
-												<span class="icon solid fa-envelope"></span>
-												<div>
-													<h3>Email</h3>
-													<p><a href="mailto:siddhantrathod2004@gmail.com">siddhantrathod2004@gmail.com</a></p>
-												</div>
-											</div>
-											<div class="contact-item">
-												<span class="icon solid fa-phone"></span>
-												<div>
-													<h3>Phone</h3>
-													<p>+91 7043851411</p>
-												</div>
-											</div>
-											<div class="contact-item">
-												<span class="icon solid fa-map-marker-alt"></span>
-												<div>
-													<h3>Location</h3>
-													<p>Vadodara, Gujarat<br />India</p>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<h3>Connect With Me</h3>
-									<ul class="icons alt">
-										<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-									</ul>
-								</div>
-
-								<div class="col-6 col-12-small">
-									<h2>Send a Message</h2>
-									<div class="box">
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="name" id="name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="email" id="email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="subject" id="subject">
-														<option value="">- Select Subject -</option>
-														<option value="general">General Inquiry</option>
-														<option value="project">Project Discussion</option>
-														<option value="collaboration">Collaboration</option>
-														<option value="other">Other</option>
-													</select>
-												</div>
-												<div class="col-12">
-													<textarea name="message" id="message" placeholder="Your Message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" class="primary" /></li>
-														<li><input type="reset" value="Reset Form" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="footer-content">
-							<div class="footer-section">
-								<h3>Get in Touch</h3>
-								<p>Feel free to reach out for collaborations or just a friendly hello</p>
-								<div class="contact-info">
-									<p><i class="fas fa-map-marker-alt"></i> Vadodara, Gujarat, IN</p>
-									<p><i class="fas fa-phone"></i> <a href="tel:+917043851411">+91 7043851411</a></p>
-									<p><i class="fas fa-envelope"></i> <a href="mailto:siddhantrathod2004@gmail.com">siddhantrathod2004@gmail.com</a></p>
-								</div>
-							</div>
-							<div class="footer-section">
-								<h3>Connect With Me</h3>
-								<ul class="icons">
-									<li><a href="https://github.com/Siddhantrathod " class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/siddhantrathod_17?igsh=MWE5NXd3MThwajFpbw==" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.linkedin.com/in/siddhant-rathod-3a05b0275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<div class="col-6 col-12-medium">
+							<article class="box">
+								<h2><i class="fas fa-pencil-ruler" aria-hidden="true"></i> UI/UX Design</h2>
+								<p>Creating intuitive and engaging user experiences.</p>
+								<ul>
+									<li>User Interface Design</li>
+									<li>User Experience Design</li>
+									<li>Wireframing</li>
+									<li>Prototyping</li>
+									<li>User Research</li>
 								</ul>
-							</div>
-						</section>
-					</footer>
+							</article>
+						</div>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Siddhant Rathod</li></ul>
+						<div class="col-6 col-12-medium">
+							<article class="box">
+								<h2><i class="fas fa-palette" aria-hidden="true"></i> Graphic Design</h2>
+								<p>Creating visually stunning designs for various platforms.</p>
+								<ul>
+									<li>Event Posters</li>
+									<li>Social Media Content</li>
+									<li>Branding Materials</li>
+									<li>Promotional Materials</li>
+								</ul>
+							</article>
+						</div>
 					</div>
+				</section>
 
+				<!-- Portfolio Section -->
+				<section id="portfolio" class="posts">
+					<header class="major">
+						<h1>My Portfolio</h1>
+						<p>Showcasing My Best Work</p>
+					</header>
+
+					<article>
+						<header>
+							<h2><a href="#">QuickMeds<br />
+							Online Inventory Management</a></h2>
+						</header>
+						<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+						<p>A MERN Stack-based medicine ordering system with multi-tier user model, streamlining inventory, order processing, and delivery across connected pharmacies.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button">View Project</a></li>
+						</ul>
+					</article>
+					<article>
+						<header>
+							<h2><a href="#">PropertyPulse<br />
+							Real Estate Platform</a></h2>
+						</header>
+						<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+						<p>A PHP & MySQL-based platform for booking, buying, and financing homes and plots, offering an end-to-end solution for real estate needs.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button">View Project</a></li>
+						</ul>
+					</article>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<form method="post" action="#" id="contact-form">
+						<div class="fields">
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" required />
+							</div>
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" required />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="3" required></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
+					</form>
+				</section>
+				<section class="split contact">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Vadodara, Gujarat<br />
+						India</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="tel:+917043851411">+91 7043851411</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:siddhantrathod2004@gmail.com">siddhantrathod2004@gmail.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://github.com/Siddhantrathod" class="icon brands alt fa-github" aria-label="GitHub Profile"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands alt fa-facebook-f" aria-label="Facebook Profile"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/siddhantrathod_17?igsh=MWE5NXd3MThwajFpbw==" class="icon brands alt fa-instagram" aria-label="Instagram Profile"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.linkedin.com/in/siddhant-rathod-3a05b0275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon brands alt fa-linkedin-in" aria-label="LinkedIn Profile"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
+
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul><li>&copy; Siddhant Rathod</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 			</div>
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				// Smooth scrolling for navigation links
-				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-					anchor.addEventListener('click', function (e) {
-						e.preventDefault();
-						document.querySelector(this.getAttribute('href')).scrollIntoView({
-							behavior: 'smooth'
-						});
-					});
-				});
-
-				// Splash screen functionality
-				document.addEventListener('DOMContentLoaded', function() {
-					const splashScreen = document.getElementById('splashScreen');
-					const wrapper = document.getElementById('wrapper');
-
-					// Hide splash screen and show main content after 3 seconds
-					setTimeout(function() {
-						splashScreen.classList.add('hidden');
-						wrapper.classList.add('visible');
-						
-						// Remove splash screen from DOM after fade out
-						setTimeout(function() {
-							splashScreen.style.display = 'none';
-						}, 500);
-					}, 1500);
-				});
-			</script>
-
+		<script src="assets/js/jquery.min.js" defer></script>
+		<script src="assets/js/jquery.scrollex.min.js" defer></script>
+		<script src="assets/js/jquery.scrolly.min.js" defer></script>
+		<script src="assets/js/browser.min.js" defer></script>
+		<script src="assets/js/breakpoints.min.js" defer></script>
+		<script src="assets/js/util.js" defer></script>
+		<script src="assets/js/main.js" defer></script>
+		<script src="assets/js/splash.js" defer></script>
 	</body>
 </html>
