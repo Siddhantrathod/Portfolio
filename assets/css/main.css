@@ -3858,7 +3858,7 @@ input, select, textarea {
 
 			#main > .posts > * {
 				padding: 4rem;
-				width: 50%;
+				width: 100%;
 			}
 
 			#main > .posts > article {
@@ -4754,5 +4754,109 @@ input, select, textarea {
     
     .footer-section {
         padding: 1em 0;
+    }
+}
+
+/* Portfolio Section Styles */
+.portfolio-item {
+    margin-bottom: 3em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item header {
+    margin-bottom: 1.5em;
+}
+
+.portfolio-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.portfolio-item h2 a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio-item h2 a:hover {
+    color: #4acaa8;
+}
+
+.portfolio-item .image {
+    margin-bottom: 1.5em;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.portfolio-item .image img {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item .image:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item p {
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.tech-tag {
+    background: rgba(74, 202, 168, 0.1);
+    color: #4acaa8;
+    padding: 0.3em 0.8em;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.portfolio-item .actions {
+    margin-top: 1.5em;
+}
+
+.portfolio-item .button {
+    background-color: #4acaa8;
+    color: #ffffff;
+    padding: 0.8em 1.5em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item .button:hover {
+    background-color: #3db392;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 736px) {
+    .portfolio-item {
+        padding: 1em;
+    }
+    
+    .portfolio-item h2 {
+        font-size: 1.3em;
+    }
+    
+    .tech-stack {
+        gap: 0.3em;
+    }
+    
+    .tech-tag {
+        font-size: 0.8em;
+        padding: 0.2em 0.6em;
     }
 }

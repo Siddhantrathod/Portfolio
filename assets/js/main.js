@@ -255,4 +255,35 @@
 
 		}
 
+	// Animate active nav link on scroll
+	$(document).ready(function() {
+		var sectionIds = ['about', 'resume', 'services', 'portfolio', 'contact'];
+		var $navLinks = $('#nav ul.links li');
+
+		function setActiveNav() {
+			var scrollPos = $(window).scrollTop();
+			var found = false;
+			sectionIds.forEach(function(id, idx) {
+				var $section = $('#' + id);
+				if ($section.length) {
+					var sectionTop = $section.offset().top - 120;
+					var sectionBottom = sectionTop + $section.outerHeight();
+					if (scrollPos >= sectionTop && scrollPos < sectionBottom && !found) {
+						$navLinks.removeClass('active');
+						$navLinks.eq(idx).addClass('active');
+						found = true;
+					}
+				}
+			});
+			// If no section found (top of page), set first as active
+			if (!found) {
+				$navLinks.removeClass('active');
+				$navLinks.first().addClass('active');
+			}
+		}
+
+		$(window).on('scroll', setActiveNav);
+		setActiveNav();
+	});
+
 })(jQuery);

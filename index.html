@@ -17,9 +17,14 @@
 	</head>
 	<body class="is-preload">
 
+		<!-- Top-right static GIF -->
+		<img src="assets/images/SS--unscreen.gif" alt="Animated Logo" class="top-right-gif" />
+
 		<!-- Splash Screen -->
 		<div class="splash-screen" id="splashScreen" aria-hidden="true">
-			<div class="splash-logo" aria-label="Loading">S</div>
+			<div class="splash-logo" aria-label="Loading">
+				<img src="assets/images/SS--unscreen.gif" alt="Loading Animation" />
+			</div>
 		</div>
 
 		<!-- Wrapper -->
@@ -27,13 +32,18 @@
 
 			<!-- Intro -->
 			<section id="intro" class="intro-section">
-				<h1>Hi, I'm<br />
-				<strong>Siddhant Rathod</strong></h1>
-				<p>A motivated and detail-oriented Information Technology student specializing in<br />
-				App and Web development, UI/UX design, and software engineering.</p>
-				<ul class="actions">
-					<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-				</ul>
+				<div class="intro-content-wrapper">
+						<img src="assets/images/main.png" alt="Siddhant Rathod" class="intro-photo" />
+					<div class="intro-text">
+						<h1>Hi, I'm<br />
+						<strong>Siddhant Rathod</strong></h1>
+						<p>A motivated and detail-oriented Information Technology student specializing in<br />
+						App and Web development, UI/UX design, and software engineering.</p>
+						<!-- <ul class="actions">
+							<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul> -->
+					</div>
+				</div>
 			</section>
 
 			<!-- Nav -->
@@ -208,28 +218,28 @@
 						<p>Showcasing My Best Work</p>
 					</header>
 
-					<article>
-						<header>
-							<h2><a href="#">QuickMeds<br />
-							Online Inventory Management</a></h2>
-						</header>
-						<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-						<p>A MERN Stack-based medicine ordering system with multi-tier user model, streamlining inventory, order processing, and delivery across connected pharmacies.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button">View Project</a></li>
-						</ul>
-					</article>
-					<article>
-						<header>
-							<h2><a href="#">PropertyPulse<br />
-							Real Estate Platform</a></h2>
-						</header>
-						<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-						<p>A PHP & MySQL-based platform for booking, buying, and financing homes and plots, offering an end-to-end solution for real estate needs.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button">View Project</a></li>
-						</ul>
-					</article>
+					<div class="projects-container">
+						<article class="project-card">
+							<header>
+								<h2><a href="#">QuickMeds<br />Online Inventory Management</a></h2>
+							</header>
+							<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+							<p>A MERN Stack-based medicine ordering system with multi-tier user model, streamlining inventory, order processing, and delivery across connected pharmacies.</p>
+							<ul class="actions special">
+								<li><a href="#" class="button">View Project</a></li>
+							</ul>
+						</article>
+						<article class="project-card">
+							<header>
+								<h2><a href="#">PropertyPulse<br />Real Estate Platform</a></h2>
+							</header>
+							<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+							<p>A PHP & MySQL-based platform for booking, buying, and financing homes and plots, offering an end-to-end solution for real estate needs.</p>
+							<ul class="actions special">
+								<li><a href="#" class="button">View Project</a></li>
+							</ul>
+						</article>
+					</div>
 				</section>
 			</main>
 
@@ -284,7 +294,7 @@
 
 			<!-- Copyright -->
 			<div id="copyright">
-				<ul><li>&copy; Siddhant Rathod</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				<ul><li>&copy; Siddhant Rathod</li></ul>
 			</div>
 		</div>
 
