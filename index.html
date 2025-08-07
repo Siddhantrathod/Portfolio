@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Doe | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar {
+      background-color: #1a1a1a;
+      width: 330px;
+      min-width: 330px;
+      max-width: 330px;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      text-align: center;
+      flex: 0 0 300px;
+    }
+    .sidebar img {
+      width: 80%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+    .sidebar h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    .sidebar p {
+      background-color: #2a2a2a;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .sidebar .contact-info {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+    .sidebar .contact-info i {
+      margin-right: 0.5rem;
+    }
+    .sidebar .social-icons a {
+      color: #ffc107;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .main-content {
+      background-color: #121212;
+      flex-grow: 1;
+      padding: 2rem;
+    }
+    .highlight {
+      color: #f9d342;
+      font-weight: 600;
+    }
+    .section-title {
+      color: #ffc107;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .info-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .info-card {
+      flex: 1 1 250px;
+      background-color: #1f1f1f;
+      padding: 1.5rem;
+      border-radius: 15px;
+    }
+    .info-card i {
+      color: #ffc107;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .navbar-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .navbar-section a {
+      color: #f1f1f1;
+      margin-left: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .info-card h5 {
+      color: #ffc107;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+  .info-card ul li {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+    .navbar-section a.active, .navbar-section a:hover {
+      color: #ffc107;
+    }
+    .tab-section {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .tab-section.active {
+      display: block;
+      opacity: 1;
+    }
+    .d-flex {
+      display: flex;
+      align-items: stretch;
+    }
+    .timeline-container {
+      position: relative;
+      margin-left: 1.5rem;
+      padding-left: 2rem;
+    }
+    .timeline-container:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0.2rem;
+      width: 3px;
+      height: 100%;
+      background: #333;
+      z-index: 0;
+    }
+    .timeline-section {
+      margin-bottom: 2.5rem;
+    }
+    .timeline-header {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #ffc107;
+    }
+    .timeline-title {
+      color: #ffc107;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      z-index: 1;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -2.1rem;
+      top: 1.1rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      border: 2px solid #ffc107;
+      background: #181818;
+      z-index: 2;
+    }
+    .timeline-content {
+      background: #181818;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+      margin-left: 0.5rem;
+    }
+    .timeline-institution {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .timeline-degree {
+      font-size: 1rem;
+      color: #ffc107;
+      margin-bottom: 0.2rem;
+    }
+    .timeline-date {
+      font-size: 0.95rem;
+      color: #bbb;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-details {
+      margin: 0.5rem 0 0 1rem;
+      padding: 0;
+      color: #eee;
+      font-size: 0.97rem;
+    }
+    .timeline-details li {
+      margin-bottom: 0.3rem;
+    }
+    @media (max-width: 991px) {
+      .d-flex {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        min-height: unset;
+        flex: none;
+        border-radius: 0 0 15px 15px;
+        padding: 1.5rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+      }
+      .sidebar img {
+        width: 60px;
+        margin-bottom: 0;
+        margin-right: 1rem;
+        border-radius: 10px;
+      }
+      .sidebar h2, .sidebar p, .sidebar .contact-info, .sidebar .social-icons {
+        display: none;
+      }
+      .sidebar .social-icons {
+        margin-top: 0;
+      }
+      .main-content {
+        padding: 1rem;
+      }
+    }
+    @media (max-width: 767px) {
+      .info-cards {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .info-card {
+        flex: 1 1 100%;
+        padding: 1rem;
+      }
+      .navbar-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar-section h3 {
+        margin-bottom: 1rem;
+      }
+      .navbar-section a {
+        margin: 0 0.5rem 0.5rem 0;
+        display: inline-block;
+      }
+      .timeline-container {
+        margin-left: 0.5rem;
+        padding-left: 1rem;
+      }
+      .timeline-container:before {
+        left: -0.2rem;
+      }
+      .timeline-content {
+        padding: 0.7rem 1rem;
+      }
+      .timeline-dot {
+        left: -2.3rem;
+      }
+    }
+    @media (max-width: 575px) {
+      .sidebar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0.25rem;
+      }
+      .sidebar img {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+      }
+      .main-content {
+        padding: 0.5rem;
+      }
+      .section-title {
+        font-size: 1.1rem;
+      }
+      .info-card h5 {
+        font-size: 1rem;
+      }
+      .navbar-section h3 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="2.jpg" alt="Profile Photo">
+    <h2>Siddhant Rathod</h2>
+    <p>Motivated IT Student & DevOps Enthusiast</p>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> siddhantrathod2004@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Vadodara, GJ</p>
+      <p><i class="fas fa-phone"></i> 7043851411</p>
+    </div>
+    <div class="social-icons mt-3">
+      <a href="https://www.linkedin.com/in/siddhant-rathod-1b7b1b1b2" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/siddhantrathod" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="DevOps-2.pdf"><i class="fas fa-file"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+  <div class="navbar-section">
+    <h3></h3>
+    <div>
+      <a href="#about" class="active">About</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div id="about" class="tab-section active">
+    <h4 class="section-title">About Me</h4>
+
+    <div class="about-summary" style="background:#181818; padding:2rem; border-radius:10px; margin-bottom:2rem;">
+      <h1 style="font-size:2.5rem; color:#ffc107;">Hi, I'm <span class="highlight">Siddhant Rathod !</span></h1>
+      <h2 style="font-size:1.4rem; color:#f9d342;">Software Developer | DevOps & Machine Learning Enthusiast</h2>
+      <p>
+        I'm a passionate <span class="highlight">final year IT engineering student</span> with hands-on experience in <span class="highlight">Flutter, Web Development, DevOps</span>, and <span class="highlight">Machine Learning</span>. I love building responsive and scalable apps, solving real-world problems, and continually learning new tools and technologies.
+      </p>
+      <p>
+        I believe in <span class="highlight">clean code</span>, strong collaboration, and an agile mindset. My journey includes interning at leading tech firms, working on impactful academic and personal projects, and acquiring certifications in key technologies.
+      </p>
+      <ul>
+        <li><strong>Tech Stack:</strong> C++, Flutter, ReactJS, HTML, CSS, JavaScript, PHP, MySQL, REST APIs</li>
+        <li><strong>DevOps & Cloud:</strong> Linux, Docker, Kubernetes, GitHub Actions, AWS (EC2, S3, IAM, VPC), CI/CD pipelines</li>
+        <li><strong>Machine Learning:</strong> Data science basics, Pandas, Numpy,,Scikit-Learn </li>
+        <li><strong>Soft Skills:</strong> Communication, Teamwork, Problem Solving, Growth Mindset</li>
+      </ul>
+    </div>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <i class="fas fa-briefcase"></i>
+        <h5>Internships</h5>
+        <p>Industrial Exposure as Flutter & Web Developer Intern
+      </div>
+      <div class="info-card">
+        <i class="fas fa-laptop-code"></i>
+        <h5>Tech Stack</h5>
+        <p>Flutter, Firebase, HTML, CSS, JavaScript, PHP, MySQL, APIs, UI/UX, DevOps basics.</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-award"></i>
+        <h5>Certifications</h5>
+        <p>Cisco Data Science, Responsive Web Design, and more.</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-user-friends"></i>
+        <h5>Values</h5>
+        <p>Teamwork, Communication, Problem Solving, Growth Mindset.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem;">
+      <h5 class="section-title">What Drives Me?</h5>
+      <ul style="color:#eee; font-size:1rem; margin-left:1.2rem;">
+        <li><span class="highlight">Continuous Learning:</span> Always exploring new tech and best practices.</li>
+        <li><span class="highlight">Building for Impact:</span> Creating solutions that make a difference.</li>
+        <li><span class="highlight">Collaboration:</span> Enjoy working with diverse teams and sharing knowledge.</li>
+        <li><span class="highlight">Attention to Detail:</span> Striving for clean, maintainable, and scalable code.</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Timeline Section -->
+    <div id="timeline" class="tab-section">
+      <h4 class="section-title">Timeline</h4>
+      <div class="timeline-container">
+        <!-- Work Experience -->
+        <div class="timeline-section">
+          <div class="timeline-header"><i class="fas fa-briefcase" style="color:#ffc107;"></i> <span class="timeline-title">Professional Experience & Achievements</span></div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#ffc107;"></div>
+            <div class="timeline-content">
+              <div class="timeline-institution"><b>Technoguide Infosoft Pvt. Ltd.</b></div>
+              <div class="timeline-date">06/2024 - 07/2024</div>
+              <div class="timeline-degree">Flutter Developer Intern</div>
+              <ul class="timeline-details">
+                <li>Built mobile apps like Live News using Flutter and Firebase</li>
+                <li>Applied HTML, CSS, and JavaScript for responsive web design</li>
+                <li>Integrated APIs to fetch and display real-time data</li>
+                <li>Focused on clean UI/UX and dynamic content rendering</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#ffc107;"></div>
+            <div class="timeline-content">
+              <div class="timeline-institution"><b>Iwebwala</b></div>
+              <div class="timeline-date">06/2025 - 07/2025</div>
+              <div class="timeline-degree">Web Developer Intern</div>
+              <ul class="timeline-details">
+                <li>Assisted in designing and developing responsive websites</li>
+                <li>Worked with HTML, CSS, JavaScript, jQuery, and PHP</li>
+                <li>Contributed to UI/UX tasks and SEO optimization</li>
+                <li>Developed Progressive Web Apps (PWA)</li>
+                <li>Created graphics using Canva, Photoshop, and Illustrator</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Education -->
+        <div class="timeline-section">
+          <div class="timeline-header"><i class="fas fa-graduation-cap" style="color:#ffc107;"></i> <span class="timeline-title">Academic Background and Qualifications</span></div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#ffc107;"></div>
+            <div class="timeline-content">
+              <div class="timeline-institution"><b>Birla Vishwakarma Mahavidhyalaya</b></div>
+              <div class="timeline-date">2022-Present</div>
+              <div class="timeline-degree">Bachelor of Technology in Information Technology</div>
+              <ul class="timeline-details">
+                <li>Currently pursuing B.Tech in Information Technology</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#ffc107;"></div>
+            <div class="timeline-content">
+              <div class="timeline-institution"><b>Phoenix Institute</b></div>
+              <div class="timeline-date">March 2022</div>
+              <div class="timeline-degree">12th Science</div>
+              <ul class="timeline-details">
+                <li>Completed Higher Secondary Education</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Certifications -->
+        <div class="timeline-section">
+          <div class="timeline-header"><i class="fas fa-certificate" style="color:#ffc107;"></i> <span class="timeline-title">Professional Certifications and Training</span></div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#ffc107;"></div>
+            <div class="timeline-content">
+              <div class="timeline-institution"><b>Cisco Networking Academy</b></div>
+              <div class="timeline-date">2025</div>
+              <div class="timeline-degree">Introduction to Data Science</div>
+              <ul class="timeline-details">
+                <li>Covered data lifecycle, pre-processing, visualization, basic analytics, and introductory ML.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Projects Section -->
+    <div id="projects" class="tab-section">
+      <h4 class="section-title">Projects</h4>
+      <div class="info-cards">
+        <div class="info-card">
+          <i class="fas fa-network-wired"></i>
+          <h5>AWS Networking Project & VPC Peering</h5>
+          <p>Created two VPCs with distinct CIDRs and launched EC2 instances in each. Configured VPC peering, updated route tables, and enabled private IP communication across VPCs. Managed security groups to allow ICMP and SSH traffic for cross-VPC access testing.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-film"></i>
+          <h5>MovieMatch - Movie Recommender System</h5>
+          <p>Built a movie recommendation system using cosine similarity on TMDB metadata. Processed and filtered data using Pandas and NumPy. Hosted live app using Streamlit Cloud. <a href="https://moviematch12.streamlit.app/" style="color:#ffc107;">Live App</a></p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h5>ExpTrack - Expense Tracker App</h5>
+          <p>Developed a mobile app to track expenses with login system. Integrated PostgreSQL backend APIs and added monthly Expense & Income summaries. Practiced version control.</p>
+        </div>
+      </div>
+    </div>
+ <!-- Skills Section -->
+<div id="skills" class="tab-section">
+  <h4 class="section-title">Skills</h4>
+  <div class="info-cards">
+
+    <!-- DevOps & Tools -->
+    <div class="info-card">
+      <i class="fas fa-tools"></i>
+      <h5>DevOps & Cloud Tools</h5>
+      <ul style="padding-left: 1.2rem;">
+        <li><strong>Version Control:</strong> Git, GitHub</li>
+        <li><strong>Containerization:</strong> Docker, basic Kubernetes</li>
+        <li><strong>Shell & Scripting:</strong> Ubuntu CLI, Bash scripting</li>
+        <li><strong>AWS Services:</strong> EC2, S3, VPC, IAM, RDS</li>
+        <li><strong>CI/CD Automation:</strong> GitHub Actions, workflow orchestration</li>
+      </ul>
+    </div>
+
+    <!-- Programming & Frameworks -->
+    <div class="info-card">
+      <i class="fas fa-code"></i>
+      <h5>Programming & Frameworks</h5>
+      <ul style="padding-left: 1.2rem;">
+        <li><strong>Languages:</strong> Python, C++, JavaScript</li>
+        <li><strong>Frontend:</strong> HTML, CSS, ReactJS, Flutter</li>
+        <li><strong>Backend:</strong> Django, Flask, Node.js</li>
+        <li><strong>Cross-platform:</strong> Flutter, React Native</li>
+      </ul>
+    </div>
+
+    <!-- Databases -->
+    <div class="info-card">
+      <i class="fas fa-database"></i>
+      <h5>Databases</h5>
+      <ul style="padding-left: 1.2rem;">
+        <li><strong>NoSQL:</strong> MongoDB, Firebase Realtime DB & Firestore</li>
+        <li><strong>SQL:</strong> MySQL, PostgreSQL, general SQL querying</li>
+      </ul>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="info-card">
+      <i class="fas fa-user-friends"></i>
+      <h5>Professional Skills</h5>
+      <ul style="padding-left: 1.2rem;">
+        <li><strong>Collaboration:</strong> Effective communication in team settings</li>
+        <li><strong>Problem Solving:</strong> Logical thinking & debugging proficiency</li>
+        <li><strong>Agile Workflow:</strong> Teamwork in sprints, SCRUM familiarity</li>
+        <li><strong>Growth Mindset:</strong> Eagerness to learn and adapt</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+     
+    <!-- Contact Section -->
+    <div id="contact" class="tab-section">
+      <h4 class="section-title">Contact</h4>
+      <div class="contact-form-wrapper" style="display:flex; justify-content:center; align-items:center; width:100%; min-height:300px;">
+        <form style="max-width:500px; width:100%; margin-top:1rem;" autocomplete="off">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      // Tab-like seamless transitions
+      const tabLinks = document.querySelectorAll('.navbar-section a');
+      const tabSections = document.querySelectorAll('.tab-section');
+      tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href.startsWith('#')) {
+            e.preventDefault();
+            tabLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            tabSections.forEach(section => {
+              if ('#' + section.id === href) {
+                section.classList.add('active');
+              } else {
+                section.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+image: alpine:latest
+pages:
+  script:
+    - mkdir project
+    - cp index.html 2.jpg DevOps-2.pdf project/
+    - cd project
+  artifacts:
+    paths:
+      - "project"
+    only:
+      - main
